@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Matemática</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1 id="titulo">Multiplicação</h1>
+  <div id="questao">
+    <div class="quadrado" id="numeroQuestao1"></div>
+    <div class="quadrado">X</div>
+    <div class="quadrado" id="numeroQuestao2"></div>
+  </div>
+  <div id="resposta">
+    <h2>Resposta</h2>
+    <div class="quadrado" id="quadradoResposta" onclick="resetValor()"></div>
+  </div>
+  <div id="teclado">
+    <div class="quadrado" onclick="adicionarNumero(1)">1</div>
+    <div class="quadrado" onclick="adicionarNumero(2)">2</div>
+    <div class="quadrado" onclick="adicionarNumero(3)">3</div>
+    <div class="quadrado" onclick="adicionarNumero(4)">4</div>
+    <div class="quadrado" onclick="adicionarNumero(5)">5</div>
+    <div class="quadrado" onclick="adicionarNumero(6)">6</div>
+    <div class="quadrado" onclick="adicionarNumero(7)">7</div>
+    <div class="quadrado" onclick="adicionarNumero(8)">8</div>
+    <div class="quadrado" onclick="adicionarNumero(9)">9</div>
+    <div class="quadrado" onclick="novaConta()">&#x21BA;</div>
+    <div class="quadrado" onclick="adicionarNumero(0)">0</div>
+    <div class="quadrado" id="botaoVerificar" onclick="mostrarResposta()">&crarr;</div>
+  </div>
+  <p id="direitos">&copy; Estúdio Esquimó - 2022</p>
+  <div id="pontuacao">
+    <p id="tituloPontuacao">Pontuação</p>
+    <p id="quantidadePontuacao"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
