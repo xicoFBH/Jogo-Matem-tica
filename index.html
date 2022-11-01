@@ -10,16 +10,20 @@
 </head>
 
 <body>
+  <p id="botaoOpcoes" onclick="mostrarModal()">&#9881;</p>
   <h1 id="titulo">Multiplicação</h1>
+  
   <div id="questao">
     <div class="quadrado" id="numeroQuestao1"></div>
     <div class="quadrado">X</div>
     <div class="quadrado" id="numeroQuestao2"></div>
   </div>
+  
   <div id="resposta">
     <h2>Resposta</h2>
-    <div class="quadrado" id="quadradoResposta" onclick="resetValor()"></div>
+    <div class="quadrado" id="quadradoResposta"></div>
   </div>
+  
   <div id="teclado">
     <div class="quadrado" onclick="adicionarNumero(1)">1</div>
     <div class="quadrado" onclick="adicionarNumero(2)">2</div>
@@ -30,15 +34,32 @@
     <div class="quadrado" onclick="adicionarNumero(7)">7</div>
     <div class="quadrado" onclick="adicionarNumero(8)">8</div>
     <div class="quadrado" onclick="adicionarNumero(9)">9</div>
-    <div class="quadrado" onclick="novaConta()">&#x21BA;</div>
+    <div class="quadrado" id="botaoNovaConta" onclick="resetValor()">&#x21BA;</div>
     <div class="quadrado" onclick="adicionarNumero(0)">0</div>
     <div class="quadrado" id="botaoVerificar" onclick="mostrarResposta()">&crarr;</div>
   </div>
   <p id="direitos">&copy; Estúdio Esquimó - 2022</p>
+  
   <div id="pontuacao">
     <p id="tituloPontuacao">Pontuação</p>
     <p id="quantidadePontuacao"></p>
   </div>
+  
+  <div id="record">
+    <p id="tituloRecord">Recorde</p>
+    <p id="quantidadeRecord">0</p>
+  </div>
+
+  <div id="tempoRestante">
+    <p id="tituloTempoRestante">Tempo</p>
+    <p id="quantidadeTempoRestante">10</p>
+  </div>
+
+  <div id="modal">
+    <div id="botaoNovoJogo">Novo Jogo</div>
+    <p id="botaoFecharModal" onclick="esconderModal()">X</p>
+  </div>
+  
   <script src="script.js"></script>
 </body>
 

@@ -1,3 +1,16 @@
+/*
+VARIAVEIS
+*/
+:root
+{
+  --principal: dodgerblue;
+  --texto: white;
+  --fundo: black;
+}
+
+/*
+TAMANHO CORRETO E IMPOSSIBILIDADE DE SELECIONAR TEXTO
+*/
 *
 {
   box-sizing: border-box;
@@ -9,6 +22,8 @@ body
 {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  background: var(--fundo);
 }
 
 .quadrado
@@ -20,9 +35,9 @@ body
   font-weight: bold;
   width: 9vh;
   height: 9vh;
-  border: solid 0.7vh black;
   border-radius: 3vh;
-  background: silver;
+  background: var(--principal);
+  color: var(--texto);
 }
 
 #titulo
@@ -53,6 +68,7 @@ body
 
 #quadradoResposta
 {
+  background: var(--principal);
   width: 12vh;
   height: 12vh;
   font-size: 7vh;
@@ -83,25 +99,99 @@ body
   right: 0;
   width: 20vh;
   height: 15vh;
-  background: silver;
-  border: 0.7vh solid black;
-  border-right: 0;
+  background: var(--principal);
+  color: var(--texto);
   border-bottom-left-radius: 3vh;
   border-top-left-radius: 3vh;
 }
 
-#tituloPontuacao
+#tituloPontuacao, #tituloRecord, #tituloTempoRestante
 {
   font-size: 3vh;
   font-weight: bold;
   text-align: center;
   margin: 0;
+  margin-top: 1vh;
+  
 }
 
-#quantidadePontuacao
+#quantidadePontuacao, #quantidadeRecord, #quantidadeTempoRestante
 {
   text-align: center;
   font-size: 5vh;
   margin: 0;
   margin-top: 2vh;
+}
+
+#botaoVerificar
+{
+  visibility: visible;
+}
+
+#record
+{
+  position: absolute;
+  top: 34vh;
+  left: 0;
+  width: 20vh;
+  height: 15vh;
+  background: var(--principal);
+  color: var(--texto);
+  border-bottom-right-radius: 3vh;
+  border-top-right-radius: 3vh;
+}
+
+#tempoRestante
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12vh;
+  height: 15vh;
+  background: var(--principal);
+  color: var(--texto);
+  border-bottom-left-radius: 3vh;
+}
+
+#modal
+{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 30, 30, 0.7);
+}
+
+#botaoNovoJogo
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18vh;
+  height: 10vh;
+  background: var(--principal);
+  border-radius: 3vh;
+}
+
+#botaoFecharModal
+{
+  position: absolute;
+  margin: 0;
+  top: 1vh;
+  right: 3vh;
+  font-size: 4vh;
+}
+
+#botaoOpcoes
+{
+  position: absolute;
+  margin: 0;
+  top: 1vh;
+  left: 3vh;
+  font-size: 4vh;
 }
